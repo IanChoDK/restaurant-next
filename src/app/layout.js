@@ -23,7 +23,6 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-<<<<<<< HEAD
 
       <header className="mb-2 shadow px-4">
         <div className="relative max-w-5xl flex flex-col sm:flex-row mx-auto sm:items-center sm:justify-between py-4">
@@ -58,31 +57,6 @@ export default function RootLayout({ children }) {
         </div>
       </header>
       <body className="min-h-full flex flex-col">{children}</body>
-=======
-      <body className="min-h-full flex flex-col">
-        <nav className="w-full h-16 bg-zinc-950 flex items-center justify-between px-4">
-          <Link href={"/"} className="text-2xl font-bold text-white">
-            Restaurant
-          </Link>
-          <div className="flex items-center gap-4">
-            <Link href={"/orders"} className="text-white hover:text-gray-400 transition-colors">
-              Pedidos
-            </Link>
-            <Link href={"/menu"} className="text-white hover:text-gray-400 transition-colors">
-              Menu
-            </Link>
-            <Link href={"/promotions"} className="text-white hover:text-gray-400 transition-colors">
-              Promociones
-            </Link>
-            <Link href={"/contact"} className="text-white hover:text-gray-400 transition-colors">
-              Contacto
-            </Link>
-          </div>
-        </nav>
-        {children}
-
-      </body>
->>>>>>> main
     </html>
   );
 }
