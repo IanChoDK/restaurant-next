@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +23,39 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+
+      <header className="mb-2 shadow px-4">
+        <div className="relative max-w-5xl flex flex-col sm:flex-row mx-auto sm:items-center sm:justify-between py-4">
+          <Link className="text-2xl flex items-center font-black" href="/">
+            <span>Restaurante</span>
+          </Link>
+          <input className="peer hidden" type="checkbox" id="navbar-open" ></input>
+          <label className="sm:hidden cursor-pointer absolute right-0 mt-1 text-xl" htmlFor="navbar-open" >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+            </svg>
+          </label>
+          <nav className="peer-checked:block hidden sm:block py-4 sm:mt-0">
+            <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-8">
+              <li className="">
+                <Link className="text-gray-600 hover:text-orange-600" href="/menu">Menu</Link>
+              </li>
+              <li>
+                <Link className="text-gray-600 hover:text-orange-600" href="/pedidos">Pedidos</Link>
+              </li>
+              <li>
+                <Link className="text-gray-600 hover:text-orange-600" href="/promociones">Promociones</Link>
+              </li>
+              <li>
+                <Link className="text-gray-600 hover:text-orange-600" href="/contactos">Contactos</Link>
+              </li>
+              <li className="mt-2 sm:mt-0">
+                <Link className="rounded-xl hover:bg-orange-600:text-white border-2 px-6 py-2 border-orange-600 font-medium text-orange-600" href="/menu">Menu</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
