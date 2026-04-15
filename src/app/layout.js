@@ -23,12 +23,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-<<<<<<< HEAD
 
-      <header className="mb-2 shadow px-4">
+      <header className="mb-2 shadow px-4 bg-zinc-900">
         <div className="relative max-w-5xl flex flex-col sm:flex-row mx-auto sm:items-center sm:justify-between py-4">
           <Link className="text-2xl flex items-center font-black" href="/">
-            <span>Restaurante</span>
+            <span className="text-orange-600">Restaurante</span>
           </Link>
           <input className="peer hidden" type="checkbox" id="navbar-open" ></input>
           <label className="sm:hidden cursor-pointer absolute right-0 mt-1 text-xl" htmlFor="navbar-open" >
@@ -38,14 +37,11 @@ export default function RootLayout({ children }) {
           </label>
           <nav className="peer-checked:block hidden sm:block py-4 sm:mt-0">
             <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-8">
-              <li className="">
-                <Link className="text-gray-600 hover:text-orange-600" href="/menu">Menu</Link>
-              </li>
               <li>
                 <Link className="text-gray-600 hover:text-orange-600" href="/pedidos">Pedidos</Link>
               </li>
               <li>
-                <Link className="text-gray-600 hover:text-orange-600" href="/promociones">Promociones</Link>
+                <Link className="text-gray-600 hover:text-orange-600" href="/promotions">Promociones</Link>
               </li>
               <li>
                 <Link className="text-gray-600 hover:text-orange-600" href="/contactos">Contactos</Link>
@@ -58,31 +54,16 @@ export default function RootLayout({ children }) {
         </div>
       </header>
       <body className="min-h-full flex flex-col">{children}</body>
-=======
-      <body className="min-h-full flex flex-col">
-        <nav className="w-full h-16 bg-zinc-950 flex items-center justify-between px-4">
-          <Link href={"/"} className="text-2xl font-bold text-white">
-            Restaurant
-          </Link>
-          <div className="flex items-center gap-4">
-            <Link href={"/orders"} className="text-white hover:text-gray-400 transition-colors">
-              Pedidos
-            </Link>
-            <Link href={"/menu"} className="text-white hover:text-gray-400 transition-colors">
-              Menu
-            </Link>
-            <Link href={"/promotions"} className="text-white hover:text-gray-400 transition-colors">
-              Promociones
-            </Link>
-            <Link href={"/contact"} className="text-white hover:text-gray-400 transition-colors">
-              Contacto
-            </Link>
-          </div>
-        </nav>
-        {children}
-
-      </body>
->>>>>>> main
+      <footer className="fixed inset-x-0 bottom-0 p-2 text-sm flex justify-between bg-zinc-900">
+        <div className="text-white">
+          &copy; Restaurante. Todos los derechos reservados. 
+        </div>
+        <div className="space-x-3 absolute right-10">
+          <a href="https://instagram.com" className="hover:underline text-white">Instagram</a>
+          <a href="https://facebook.com" className="hover:underline text-white">Facebook</a>
+          <a href="https://gmail.com" className="hover:underline text-white">Correo</a>
+        </div>
+      </footer>
     </html>
   );
 }
