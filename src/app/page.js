@@ -1,65 +1,102 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex flex-col w-full">
+      
+      <section className="flex flex-col items-center justify-center py-20 px-4 text-center bg-zinc-800 text-white rounded-b-3xl shadow-md">
+        <h1 className="text-5xl md:text-7xl font-black text-orange-600 mb-6 tracking-tight">
+          Sabores que Inspiran
+        </h1>
+        <p className="text-lg md:text-xl text-zinc-300 max-w-2xl mb-10">
+          Descubrí la mejor experiencia gastronómica. Ingredientes frescos, recetas tradicionales y un toque moderno en cada bocado.
+        </p>
+      </section>
+
+      <section className="py-20 px-4 max-w-6xl mx-auto w-full">
+        <div className="flex items-center justify-between mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-orange-600">
+            Nuestras Especialidades
+          </h2>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-zinc-100 transition-transform hover:-translate-y-1 flex flex-col">
+            
+            <div className="h-60 relative overflow-hidden">
+              <Image 
+                src="/pizza.jpg" 
+                alt="Pizza"
+                fill 
+                sizes="(max-width: 768px) 100vw, 33vw" 
+                className="object-cover group-hover:scale-105 transition-transform duration-300" 
+              />
+            </div>
+
+            <div className="p-6 flex flex-col grow">
+              <h3 className="text-2xl font-bold text-zinc-900 mb-3">Pizzas</h3>
+              <p className="text-zinc-600 grow mb-6">
+                Masa de fermentación lenta, salsa de tomates peritas y los ingredientes más frescos. Desde las clásicas hasta nuestras creaciones de autor.
+              </p>
+              <Link href="/menu/pizzas" className="text-orange-600 font-bold hover:text-orange-700 inline-flex items-center group">
+                Ver opciones 
+                <span className="ml-2 transition-transform group-hover:translate-x-1">&rarr;</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-zinc-100 transition-transform hover:-translate-y-1 flex flex-col">
+            
+            <div className="h-60 relative overflow-hidden">
+              <Image 
+                src="/hamburguesa.jpg"
+                alt="Hamburguesa con papas"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div className="p-6 flex flex-col grow">
+              <h3 className="text-2xl font-bold text-zinc-900 mb-3">Hamburguesas</h3>
+              <p className="text-zinc-600 grow mb-6">
+                Medallon de carne premium, pan artesanal tostado con manteca y acompañadas siempre de nuestras papas rústicas crujientes.
+              </p>
+              <Link href="/menu/hamburguesas" className="text-orange-600 font-bold hover:text-orange-700 inline-flex items-center group">
+                Ver opciones 
+                <span className="ml-2 transition-transform group-hover:translate-x-1">&rarr;</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-zinc-100 transition-transform hover:-translate-y-1 flex flex-col">
+            
+            <div className="h-60 relative overflow-hidden">
+              <Image 
+                src="/empanadas.jpg"
+                alt="Empanadas"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div className="p-6 flex flex-col grow">
+              <h3 className="text-2xl font-bold text-zinc-900 mb-3">Empanadas</h3>
+              <p className="text-zinc-600 grow mb-6">
+                Fritas o al horno. Sabores tradicionales argentinos y opciones gourmet con rellenos abundantes y masa casera.
+              </p>
+              <Link href="/menu/empanadas" className="text-orange-600 font-bold hover:text-orange-700 inline-flex items-center group">
+                Ver opciones 
+                <span className="ml-2 transition-transform group-hover:translate-x-1">&rarr;</span>
+              </Link>
+            </div>
+          </div>
+
         </div>
-      </main>
+      </section>
     </div>
   );
 }
