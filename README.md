@@ -1,3 +1,21 @@
+# RESTAURANT
+
+Este proyecto se trata de un restaurante donde se pueden realizar pedidos, agregandolos desde el menu y aplicar promociones.
+
+## Informacion del equipo
+
+Numero del grupo: Grupo 10
+Nombre del equipo: GRUPO 10
+
+## Integrantes
+
+Altamirano Marcos
+Chena Martin
+Funes Marcos
+Ibañez Ian
+Pereyra Franco
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
