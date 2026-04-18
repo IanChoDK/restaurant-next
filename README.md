@@ -4,8 +4,8 @@ Este proyecto se trata de un restaurante donde se pueden realizar pedidos, agreg
 
 ## Informacion del equipo
 
-Numero del grupo: Grupo 10
-Nombre del equipo: GRUPO 10
+- Numero del grupo: Grupo 10
+- Nombre del equipo: GRUPO 10
 
 ## Integrantes
 
