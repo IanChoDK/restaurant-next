@@ -36,9 +36,9 @@ export default async function CategoriaPage({ params }) {
   if (!categoriaData) return <p>Categoría no encontrada</p>;
 
   return (
-    <div>
-      <h1>{categoriaData.emoji} {categoriaData.label}</h1>
-      <ul>
+    <div className='flex flex-1 flex-col h-120 items-center text-center justify-start gap-10 bg-zinc-900 text-white py-5'>
+      <h1 className='font-bold text-4xl'>{categoriaData.emoji} {categoriaData.label}</h1>
+      <ul className='flex flex-col gap-4 items-center'>
         {categoriaData.items.map((item) => (
           <li key={item.name}>
             <strong>{item.name}</strong> — ${item.price}

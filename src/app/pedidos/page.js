@@ -15,8 +15,8 @@ export default function Pedidos(){
 
     return(
         
-        <section className="min-h-screen bg-gray-900 text-gray-300 flex flex-col items-center justify-center gap-4">
-            <h1 className="text-3xl font-bold text-orange-400">
+        <section className="min-h-screen bg-zinc-900 text-gray-300 flex flex-col items-center justify-center gap-4">
+            <h1 className="text-3xl font-bold text-orange-600">
                 Pedidos del Restaurante
             </h1>
 
@@ -28,7 +28,7 @@ export default function Pedidos(){
                     <Link
                         key={pedido.id}
                         href={`/pedidos/${pedido.id}`}
-                        className="bg-gray-800 p-4 rounded-xl shadow border border-gray-700 hover:border-orange-500 hover:scale-105 transition"
+                        className="bg-gray-800 p-4 rounded-xl shadow border border-gray-700 hover:border-orange-600 hover:scale-105 transition"
                     >
                         <h2 className="text-xl font-bold">Pedido {pedido.id}</h2>
                         <p>Cliente: {pedido.cliente}</p>

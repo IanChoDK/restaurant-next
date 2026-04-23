@@ -17,25 +17,31 @@ export default function page() {
                     <section className='w-75 text-center items-center gap-4 my-8 p-6 rounded-3xl flex flex-col bg-red-600'>
                         <div>
                             <h1 className='text-lg'>Descuento Pizzas 20%</h1>
-                            <p className="py-1 text-4xl font-extrabold">20PZ26</p>
+                            <p className="py-1 text-4xl font-extrabold hover:scale-110 transition">20PZ26</p>
                         </div>
-                        <Link href={"/menu"} className='p-2 text-center rounded-md text-black bg-white transition-colors hover:bg-gray-500'> Ir al menu</Link>
+                        <Link href={"/menu/pizzas"} className='p-2 text-center rounded-md text-black bg-white hover:bg-gray-500 hover:scale-110 transition'>
+                            Ir a pizzas
+                        </Link>
                     </section>
 
                     <section className='w-75 text-center items-center gap-4 my-8 p-6 rounded-3xl flex flex-col bg-red-600'>
                         <div>
                             <h1 className='text-lg'>Descuento Hamburgesas 2x1</h1>
-                            <p className="py-1 text-4xl font-extrabold">2X1H26</p>
+                            <p className="py-1 text-4xl font-extrabold hover:scale-110 transition">2X1H26</p>
                         </div>
-                        <Link href={"/menu"} className='p-2 text-center rounded-md text-black bg-white transition-colors hover:bg-gray-500'> Ir al menu</Link>
+                        <Link href={"/menu/hamburguesas"} className='p-2 text-center rounded-md text-black bg-white hover:bg-gray-500 hover:scale-110 transition'>
+                            Ir a hamburguesas
+                        </Link>
                     </section>
 
                     <section className='w-75 text-center items-center gap-4 my-8 p-6 rounded-3xl flex flex-col bg-red-600'>
                         <div>
                             <h1 className='text-lg'>Descuento Empanadas 15%</h1>
-                            <p className="py-1 text-4xl font-extrabold">05EM26</p>
+                            <p className="py-1 text-4xl font-extrabold hover:scale-110 transition">05EM26</p>
                         </div>
-                        <Link href={"/menu"} className='p-2 text-center rounded-md text-black bg-white transition-colors hover:bg-gray-500'> Ir al menu</Link>
+                        <Link href={"/menu/empanadas"} className='p-2 text-center rounded-md text-black bg-white hover:bg-gray-500 hover:scale-110 transition'>
+                            Ir a empanadas
+                        </Link>
                     </section>
                 </div>
 
